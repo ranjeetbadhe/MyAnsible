@@ -1,4 +1,3 @@
 Hallo,
 Ich bin Samir und arbeite in der Telekommunikationsbranche.
-Ich habe Erfahrung mit IMS, LTE, VOLTE, 5G, IOT, AI, Openstack, Docker, Kubernetes, Ansible, Jenkins, Git.
-Ich arbeite als 5G Researcher.
+
