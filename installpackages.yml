@@ -1,4 +1,4 @@
----
+i---
  - name: Simple play to install multiple pkgs
    hosts: client
    gather_facts: true
