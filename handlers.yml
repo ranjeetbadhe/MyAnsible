@@ -8,17 +8,17 @@
      - name: Install Web server
        yum:
          name: httpd
-         state: absent
-         register: out
-   tasks:
+         state: present
+ #        register: out
+  # tasks:
      - name: Install Maria DB
        yum:
-         name: Install MariaDB 
+         name:  mariadb-server 
          state: present
 
-   tasks:
-     - name: httpd service starting
+  # tasks:
+     - name: start httpd
        service:
          name: httpd
          state: started
-         when: out.changed == true 
+#         when: out.changed == true 
