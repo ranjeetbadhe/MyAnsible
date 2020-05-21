@@ -1,0 +1,24 @@
+---
+ - name: "Deploy 2 tier packages"
+   hosts: centos
+   gather_facts: true
+   become: yes
+
+   tasks:
+     - name: Install Web server
+       yum:
+         name: httpd
+         state: absent
+         register: out
+   tasks:
+     - name: Install Maria DB
+       yum:
+         name: Install MariaDB 
+         state: present
+
+   tasks:
+     - name: httpd service starting
+       service:
+         name: httpd
+         state: started
+         when: out.changed == true 
