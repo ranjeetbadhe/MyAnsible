@@ -1,4 +1,4 @@
-i---
+---
  - name: Simple play to install multiple pkgs
    hosts: client
    gather_facts: true
@@ -18,6 +18,3 @@ i---
        when: ansible_os_family=="Debian" 
 #Abhishek
 #Samir
-#Navratna
-#Chaurasiya
-#vaishnavi 1231
