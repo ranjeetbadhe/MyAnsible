@@ -1,0 +1,24 @@
+---
+- name: Lets install the NGINX Server
+  hosts: centos
+  become: true
+  gather_facts: true
+
+  tasks:
+  - name: This is first part of playbook
+    yum: 
+      name: nginx 
+      state: latest
+    notify: 
+      - start nginx
+
+  handlers:
+    - name: start nginx
+      service:
+        name: nginx
+        state: started   
+
+
+  
+  
+
