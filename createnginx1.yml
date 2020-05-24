@@ -10,6 +10,7 @@
       name: nginx 
       state: latest
     register: out
+  - debug: var=out.changed   
 
   - name: start the service
     service:
