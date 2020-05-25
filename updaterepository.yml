@@ -1,0 +1,30 @@
+---
+  - name: update repostory with different ways
+    hosts: centos
+    become: yes
+    gather_facts: true
+
+    tasks:
+      - name: setup epel-release repository
+        yum: name=epel-release state=present
+
+
+      - name: Lets install all package with_items dictionary
+        yum: name={{item}} state=present
+
+        with_items:
+        - httpd
+        - mariadb-server
+        - php-mysql
+        - php-pear
+        - php-common
+        - php-gd
+        
+      - name: Lets install all packages with loop
+        yum: name={{item}} state=present 
+      
+
+        loop:
+          - gettext-devel
+          - zlib-devel
+     
